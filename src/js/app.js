@@ -1,3 +1,8 @@
-import api from '../js/services/apiService';
+import locations from "./store/locations";
 
-api.countries().then(res => console.log(res));
+locations.Init().then(res => {
+        console.log(res);
+        console.log(locations);
+        console.log(locations.getCitiesByCountryCode('PE'));
+    }
+);

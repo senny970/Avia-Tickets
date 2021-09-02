@@ -33,7 +33,9 @@ class Api {
         }
     }
 
-    async prices(params) {}
+    async prices(params) {
+        
+    }
 
 }
 
