@@ -28,6 +28,7 @@ const datePicker = document.querySelectorAll('.datepicker');
 M.Datepicker.init(datePicker, {
     showClearBtn: true,
     autoClose: true,
+    format: 'yyyy-mm',
 });
 
 export function getDatePickerInstance(elem) {
