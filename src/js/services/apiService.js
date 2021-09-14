@@ -45,6 +45,15 @@ class Api {
         }
     }
 
+    async airlines() {
+        try {
+            const response = await axios.get(`${this.url}/airlines`);
+            return response.data;
+        } catch (e) {
+            console.error(e);
+            return Promise.reject(e);
+        }
+    }
 }
 
 const api = new Api(config);
