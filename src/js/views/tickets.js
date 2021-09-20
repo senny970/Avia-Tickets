@@ -30,7 +30,7 @@ class TicketsUI {
 
     showEmptyMsg() {
         const template = TicketsUI.emptyMsgTemplate();
-        this.container.insertAdjacentHTML('afterbegin',template);
+        this.container.insertAdjacentHTML('afterbegin', template);
     }
 
     static emptyMsgTemplate() {
