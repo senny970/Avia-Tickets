@@ -4,13 +4,17 @@ import './libs'; //import ./libs/index.js
 import formUI from './views/form'
 import currencyUI from "./views/currency";
 import ticketsUI from "./views/tickets";
+import favorites from "./store/favorites";
 
 //Debug
 import api from "./services/apiService";
+const debug = true;
 
 document.addEventListener('DOMContentLoaded', () => {
         initApp();
+        favorites.init();
         const form = formUI.form;
+        const preloader = document.querySelector('.preloader-wrapper');
 
         //Events
         form.addEventListener('submit', (e) => {
@@ -18,25 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 onFormSubmit();
         })
 
+        formDisable(true);
+
         // Handlers
         async function initApp() {
                 await locations.init();
                 formUI.setAutocompleteData(locations.shortCitiesList);
-                initDropDown();
-                //Debug
-                console.log('Cities:\n');
-                console.log(api.cities())
-                console.log('Countries:\n');
-                console.log(api.countries())
-                console.log('Prices:\n');
-                console.log(api.prices())
-                console.log('Airlines:\n');
-                console.log(api.airlines())
-                console.log('ShortCitiesList:\n');
-                console.log(locations.shortCitiesList);
-                //Debug
-                console.log('Locations:\n');
-                console.log(locations)
+
+                //DebugData
+                if (debug) {
+                        console.log('Cities:\n');
+                        console.log(api.cities());
+                        console.log('Countries:\n');
+                        console.log(api.countries())
+                        console.log('Prices:\n');
+                        console.log(api.prices());
+                        console.log('Airlines:\n');
+                        console.log(api.airlines())
+                        console.log('ShortCitiesList:\n');
+                        console.log(locations.shortCitiesList);
+                        //Debug
+                        console.log('Locations:\n');
+                        console.log(locations);
+                }
+
+                formDisable(false);
         }
         
         async function onFormSubmit() {
@@ -56,13 +66,34 @@ document.addEventListener('DOMContentLoaded', () => {
                         currency,
                 });
 
-                //console.log(locations.lastSearch);
                 ticketsUI.renderTickets(locations.lastSearch);
+
+                if (debug) {
+                        console.log('LastSearch:\n');
+                        console.log(locations.lastSearch);
+                }
         }
 
-        function initDropDown() {
-                let elems = document.querySelectorAll('.dropdown-favorites');
-                console.log(elems)
-                let instances = M.Dropdown.init(elems);
+        function formDisable(state) {
+                let elements = form.elements;
+
+                if (state) {
+                        preloader.classList.add('active');
+                } else {
+                        preloader.classList.remove('active');
+                }
+
+                for (let i = 0, len = elements.length; i < len; ++i) {
+                        if (state) {
+                                elements[i].classList.add('disabled');
+                                elements[i].readOnly = true;
+
+                        } else {
+                                elements[i].classList.remove('disabled');
+                                elements[i].readOnly = false;
+                        }
+                }
         }
 })
+
+export default debug;

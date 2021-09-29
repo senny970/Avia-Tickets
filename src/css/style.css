@@ -71,9 +71,15 @@
   color: #000;
 }
 
+.favorite-item {
+  border-top: 1px black dashed;
+  border-left: 1px black dashed;
+  border-right: 1px black dashed;
+}
+
 .favorites .favorite-item-airline-img {
   max-width: 100px;
-  margin-right: 10px;
+  padding: 10px 0 10px 10px;
 }
 
 .favorites .favorite-item-info {
@@ -166,4 +172,9 @@
   background: whitesmoke;
   font-weight: bold;
   font-size: 18px;
+}
+
+.preloader {
+  display: flex;
+  margin-left: 25px;
 }

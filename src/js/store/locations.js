@@ -1,5 +1,6 @@
 import api from "../services/apiService";
 import {formatDate} from "../helpers/date";
+import MD5 from "../helpers/md5";
 
 class Locations {
     constructor(api, helpers) {
@@ -88,11 +89,7 @@ class Locations {
 
     async fetchTickets(params) {
         const response = await this.api.prices(params);
-        console.log('Prices:\n')
-        console.log(response.data)
         this.lastSearch = this.serializeTickets(response.data);
-        console.log('LastSearch:\n')
-        console.log(this.lastSearch);
     }
 
     serializeTickets(tickets) {
@@ -105,6 +102,10 @@ class Locations {
                 airline_name: this.getAirlineNameByCode(ticket.airline),
                 departure_at: this.formatDate(ticket.departure_at, 'dd MMM yyyy hh:mm'),
                 return_at: this.formatDate(ticket.return_at, 'dd MMM yyyy hh:mm'),
+                hash: MD5(this.getCityNameByCode(ticket.origin) +
+                    this.formatDate(ticket.departure_at, 'dd MMM yyyy hh:mm') +
+                    this.getCityNameByCode(ticket.destination) +
+                    this.formatDate(ticket.return_at, 'dd MMM yyyy hh:mm')),
             }
         })
     }
