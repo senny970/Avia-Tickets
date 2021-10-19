@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1634551479426" clover="3.2.0">
-  <project timestamp="1634551479426" name="All files">
-    <metrics statements="218" coveredstatements="2" conditionals="38" coveredconditionals="0" methods="76" coveredmethods="1" elements="332" coveredelements="3" complexity="0" loc="218" ncloc="218" packages="7" files="12" classes="12"/>
+<coverage generated="1634623089118" clover="3.2.0">
+  <project timestamp="1634623089118" name="All files">
+    <metrics statements="219" coveredstatements="18" conditionals="42" coveredconditionals="4" methods="76" coveredmethods="5" elements="337" coveredelements="27" complexity="0" loc="219" ncloc="219" packages="7" files="12" classes="12"/>
     <package name="js">
       <metrics statements="46" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <file name="app.js" path="D:\Senny\Web\Avia-Tickets\src\js\app.js">
@@ -55,22 +55,22 @@
       </file>
     </package>
     <package name="js.config">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="apiConfig.js" path="D:\Senny\Web\Avia-Tickets\src\js\config\apiConfig.js">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="js.helpers">
-      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="1"/>
       <file name="date.js" path="D:\Senny\Web\Avia-Tickets\src\js\helpers\date.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
       <file name="md5.js" path="D:\Senny\Web\Avia-Tickets\src\js\helpers\md5.js">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="js.libs">
@@ -92,10 +92,10 @@
       </file>
     </package>
     <package name="js.services">
-      <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="22" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
       <file name="apiService.js" path="D:\Senny\Web\Avia-Tickets\src\js\services\apiService.js">
-        <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="22" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
@@ -116,11 +116,11 @@
         <line num="51" count="0" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
       </file>
     </package>
     <package name="js.store">
-      <metrics statements="98" coveredstatements="0" conditionals="28" coveredconditionals="0" methods="33" coveredmethods="0"/>
+      <metrics statements="99" coveredstatements="12" conditionals="32" coveredconditionals="4" methods="33" coveredmethods="3"/>
       <file name="favorites.js" path="D:\Senny\Web\Avia-Tickets\src\js\store\favorites.js">
         <metrics statements="56" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="14" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
@@ -181,14 +181,14 @@
         <line num="157" count="0" type="stmt"/>
       </file>
       <file name="locations.js" path="D:\Senny\Web\Avia-Tickets\src\js\store\locations.js">
-        <metrics statements="42" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="19" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="43" coveredstatements="12" conditionals="12" coveredconditionals="4" methods="19" coveredmethods="3"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
@@ -209,21 +209,22 @@
         <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="60" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
+        <line num="66" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
         <line num="74" count="0" type="stmt"/>
-        <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="76" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="77" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
         <line num="92" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
         <line num="97" count="0" type="stmt"/>
-        <line num="114" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
       </file>
     </package>
     <package name="js.views">
