@@ -2,7 +2,7 @@ import api from "../services/apiService";
 import {formatDate} from "../helpers/date";
 import MD5 from "../helpers/md5";
 
-class Locations {
+export class Locations {
     constructor(api, helpers) {
         this.api = api;
         this.countries = null;
@@ -63,6 +63,7 @@ class Locations {
     }
 
     serializeCountries(countries)  {
+        if(!Array.isArray(countries) || !countries.length) return {};
         return countries.reduce((acc, country) => {
             acc[country.code] = country;
             return acc;
