@@ -9,7 +9,7 @@ import favorites from "./store/favorites";
 //Debug
 import api from "./services/apiService";
 
-const debug = true;
+const debug = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     initApp();
